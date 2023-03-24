@@ -1,0 +1,7 @@
+﻿  Application.cpp
+     Creating library D:\Dev\Hazel\\bin\Release-x64\Hazel\Hazel.lib and object D:\Dev\Hazel\\bin\Release-x64\Hazel\Hazel.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 6 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Hazel.vcxproj -> D:\Dev\Hazel\bin\Release-x64\Hazel\Hazel.dll
