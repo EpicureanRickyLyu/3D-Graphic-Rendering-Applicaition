@@ -23,6 +23,9 @@ project "Hazel"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+   pchheader "pch.h" -- equal use pch for solution
+   pchsource "Hazel/src/pch.cpp" -- equal set pch.h to create pch
+
    -- files that want to be build
    files 
    { 
@@ -32,7 +35,8 @@ project "Hazel"
 
    includedirs
    {
-       "%{prj.name}/Vendor/spdlog/include";
+       "%{prj.name}/src",
+       "%{prj.name}/Vendor/spdlog/include",
    }
 
    filter "system:windows"
