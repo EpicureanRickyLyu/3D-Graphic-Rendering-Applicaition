@@ -1,7 +1,7 @@
 -- premake5.lua -- only support 2019 currently
 workspace "Hazel"
    architecture "x64"
-   startproject "Sandbox"
+   startproject "SandBox"
    configurations 
    { 
        "Debug", 
@@ -49,7 +49,7 @@ project "Hazel"
       postbuildcommands
       {
           --copy dll into sandbox
-          ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir ..)
+          ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/SandBox")
       }
 
    filter "configurations:Debug"
@@ -69,8 +69,8 @@ project "Hazel"
 
 project "SandBox"
     location "SandBox"
-    kind "ConsoleApp" -- dynamic library
-    language "C++17"
+    kind "ConsoleApp" -- App
+    language "C++"
         
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")   
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -92,27 +92,27 @@ project "SandBox"
         staticruntime "On"
         systemversion "latest"
 
-    defines 
-    { 
-        "HZ_PLATFORM_WINDOWS",
-    }
+        defines 
+        { 
+            "HZ_PLATFORM_WINDOWS",
+        }
 
-    links
-    {
-        "Hazel"
-    }
+        links
+        {
+            "Hazel"
+        }
 
     filter "configurations:Debug"
-       defines "HZ_DEBUG"
-       symbols "On"
+        defines "HZ_DEBUG"
+        symbols "On"
     
     filter "configurations:Release"
-       defines "HZ_RELEASE"
-       optimize "On"
+        defines "HZ_RELEASE"
+        optimize "On"
 
     filter "configurations:Dist"
-       defines "HZ_DIST"
-       optimize "On"
+        defines "HZ_DIST"
+        optimize "On"
 
 
 
