@@ -1,5 +1,5 @@
 #pragma once
-#include "Hazel.h"
+#include "core.h"
 #include "Event/Event.h"
 
 #include <functional>
@@ -8,10 +8,10 @@ namespace Hazel
 	struct WindowProps
 	{
 		std::string m_Title;
-		u32 m_Width;
-		u32 m_Height;
+		unsigned int m_Width;
+		unsigned int m_Height;
 
-		WindowProps(const std::string title = "Hazel", u32 width = 1280, u32 height = 720)
+		WindowProps(const std::string title = "Capybara", unsigned int width = 1280, unsigned int height = 720)
 			:m_Title(title), m_Width(width), m_Height(height)
 		{
 		}

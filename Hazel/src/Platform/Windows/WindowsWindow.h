@@ -1,7 +1,9 @@
 #pragma once
-#include "Hazel/Window.h"
 
 #include "GLFW/glfw3.h"
+
+#include "Hazel/Window.h"
+
 
 namespace Hazel
 {
@@ -36,7 +38,7 @@ namespace Hazel
 		{
 			//using EventCallbackFunc = std::function<void(Event&)>;
 			std::string m_title;
-			u32 m_width, m_height;
+			unsigned int m_width, m_height;
 			bool VSync;
 
 			EventCallbackFunc m_eventCallback;

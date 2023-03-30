@@ -1,6 +1,9 @@
 #include "pch.h"
 
 #include "WindowsWindow.h"
+
+#include "Hazel/Log.h"
+
 namespace Hazel
 {
 
@@ -55,11 +58,12 @@ namespace Hazel
 
 		HZ_LOG_CORE_INFO("Ceateing window {0} {1} {2}", m_data.m_title, m_data.m_width, m_data.m_height);
 
-		if (s_isGLFWInitialized)
+		if (!s_isGLFWInitialized)
 		{
 			int success = glfwInit();
 
 			// #TODO ASSERTION ERROR
+			HZ_CORE_ASSERT(success, "Could not initialize GLFW!");
 
 			s_isGLFWInitialized = true;
 		}
