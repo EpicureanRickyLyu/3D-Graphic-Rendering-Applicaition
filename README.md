@@ -1,2 +1,2 @@
-# Captbara Engine
+# Capybara Engine
 - Real Time 3D Graphic Rendering Software - Initiliazing ...
