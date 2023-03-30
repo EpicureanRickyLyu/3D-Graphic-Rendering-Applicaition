@@ -73,14 +73,17 @@ project "Hazel"
 
    filter "configurations:Debug"
       defines "HZ_DEBUG"
+      --buildoptions "/MDd"
       symbols "On"
     
    filter "configurations:Release"
       defines "HZ_RELEASE"
+      --buildoptions "/MD"
       optimize "On"
 
    filter "configurations:Dist"
       defines "HZ_DIST"
+      --buildoptions "/MD"
       optimize "On"
    
       
@@ -123,14 +126,17 @@ project "SandBox"
 
     filter "configurations:Debug"
         defines "HZ_DEBUG"
+        --buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "HZ_RELEASE"
+        --buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "HZ_DIST"
+       --buildoptions "/MD"
         optimize "On"
 
 

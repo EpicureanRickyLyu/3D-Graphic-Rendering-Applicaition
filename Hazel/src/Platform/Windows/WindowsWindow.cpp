@@ -1,46 +1,77 @@
-#include "Hazel/Window.h"
+#include "pch.h"
 
-#include "GLFW/glfw3.h"
-
+#include "WindowsWindow.h"
 namespace Hazel
 {
-	class WindowsWindow:public Window
+
+	static bool s_isGLFWInitialized = false;
+
+	//Window.h static function, implement platform specific
+	Window* Window::Create(const WindowProps& props)
 	{
-	public:
-		WindowsWindow(const WindowProps& Props);
+		return new WindowsWindow(props);
+	}
 
-		void OnUpdate() override;
+	WindowsWindow::WindowsWindow(const WindowProps& Props)
+	{
+		Init(Props);
+	}
 
-		unsigned int GetWidth() const override;
+	WindowsWindow::~WindowsWindow()
+	{
+		ShutDown();
+	}
 
-		unsigned int GetHeight() const override;
+	void WindowsWindow::OnUpdate()
+	{
+		glfwPollEvents();
+		glfwSwapBuffers(m_Window);
+	}
 
-		void SetEventCallback(const EventCallbackFunc& callback) const override;
-
-		void SetVSync(bool enabled) const override;
-
-		void IsVSync() const override;
-
-	private:
-		virtual void Init(const WindowProps& Props);
-		virtual void ShutDown();
-
-	private:
-		GLFWwindow* m_Window;
-
-
-		struct WindowData
+	void WindowsWindow::SetVSync(bool enabled)
+	{
+		if (enabled)
 		{
-			//using EventCallbackFunc = std::function<void(Event&)>;
-			std::string m_title;
-			u32 m_width, m_height;
-			bool VSync;
+			glfwSwapInterval(1);
+		}
+		else
+		{
+			glfwSwapInterval(0);
+		}
 
-			EventCallbackFunc EventCallback;
-		};
+		m_data.VSync = enabled;
+	}
 
-		WindowData m_data;
-	};
+	bool WindowsWindow::IsVSync() const
+	{
+		return m_data.VSync;
+	}
 
+	void WindowsWindow::Init(const WindowProps& Props)
+	{
+		m_data.m_title = Props.m_Title;
+		m_data.m_width = Props.m_Width;
+		m_data.m_height = Props.m_Height;
+
+		HZ_LOG_CORE_INFO("Ceateing window {0} {1} {2}", m_data.m_title, m_data.m_width, m_data.m_height);
+
+		if (s_isGLFWInitialized)
+		{
+			int success = glfwInit();
+
+			// #TODO ASSERTION ERROR
+
+			s_isGLFWInitialized = true;
+		}
+		m_Window = glfwCreateWindow((int)m_data.m_width, (int)m_data.m_height, m_data.m_title.c_str(), nullptr, nullptr);
+		glfwMakeContextCurrent(m_Window);
+		glfwSetWindowUserPointer(m_Window, &m_data);
+		SetVSync(true);
+	}
+
+	void WindowsWindow::ShutDown()
+	{
+		glfwDestroyWindow(m_Window);
+	}
 
 }

@@ -14,6 +14,7 @@ public:
 	}
 };
 
+//define entry point function implementation
 Hazel::Application* Hazel::CreateApplication()
 {
 	return new SandBox();

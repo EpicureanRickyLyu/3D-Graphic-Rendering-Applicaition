@@ -10,7 +10,9 @@ int main(int argc, char** argv)
 	Hazel::Application* app = Hazel::CreateApplication();
 
 	app->Run();
+
 	delete app;
+
 	return 0;
 }
 #endif
