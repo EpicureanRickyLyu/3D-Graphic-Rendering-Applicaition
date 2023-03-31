@@ -32,6 +32,7 @@ namespace Hazel
 		virtual void ShutDown();
 
 	private:
+		//GLFW Window Type Pointer
 		GLFWwindow* m_Window { nullptr };
 
 		struct WindowData

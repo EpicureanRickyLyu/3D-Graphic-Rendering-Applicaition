@@ -1,7 +1,10 @@
 #pragma once
 
 #include "Event.h"
+#include "Hazel/Core/KeyCode.h"
+
 #include <sstream>
+
 namespace Hazel
 {
 
@@ -14,8 +17,6 @@ namespace Hazel
 		protected:
 			KeyEvent(const KeyCode keycode)
 				: m_KeyCode(keycode) {}
-
-			EVENT_CLASS_CATEGORY()
 
 			KeyCode m_KeyCode;
 	};

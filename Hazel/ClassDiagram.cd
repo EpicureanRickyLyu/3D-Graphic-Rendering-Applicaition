@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Hazel::Application" Collapsed="true">
+    <Position X="29.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAACAAAABAAAAAAAEAAAAAAAAACAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>src\Hazel\Application.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::Log" Collapsed="true">
+    <Position X="29.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACBACAAAAAAAAAAAAAAAAAAgAAIAAAAACAAAAAEA=</HashCode>
+      <FileName>src\Hazel\Log.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::Window">
+    <Position X="1.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAABAAAAAAABAAQAAAEAAgAAAAEEAAAA=</HashCode>
+      <FileName>src\Hazel\Window.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::WindowResizeEvent">
+    <Position X="22.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAFAAAAAABAAAAAAACAEAAAAEAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\ApplicationEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::WindowCloseEvent">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\ApplicationEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::AppTickEvent">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\ApplicationEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::AppUpdateEvent">
+    <Position X="7" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\ApplicationEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::AppRenderEvent">
+    <Position X="11.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\ApplicationEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::Event">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAIAAAAIAAAEEAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>src\Hazel\Event\Event.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::EventDispatcher" Collapsed="true">
+    <Position X="31.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAgAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\Event.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::KeyEvent">
+    <Position X="16" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAACAAAA=</HashCode>
+      <FileName>src\Hazel\Event\KeyEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::KeyPressedEvent">
+    <Position X="18.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAABAAAAAEAAAA=</HashCode>
+      <FileName>src\Hazel\Event\KeyEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::KeyReleasedEvent">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\KeyEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::KeyTypedEvent">
+    <Position X="16" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\KeyEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::MouseMovedEvent">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAEAAADAAAAAAAAAAAAYAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\MouseEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::MouseScrolledEvent">
+    <Position X="20.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAMAAAAAAEAAAAAAAAgAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>src\Hazel\Event\MouseEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::MouseButtonEvent">
+    <Position X="26" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\MouseEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::MouseButtonPressedEvent">
+    <Position X="25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\MouseEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::MouseButtonReleasedEvent">
+    <Position X="27.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Event\MouseEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hazel::WindowsWindow">
+    <Position X="1.25" Y="8.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="Hazel::WindowsWindow::WindowData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>src\Platform\Windows\WindowsWindow.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAAAAABAAIABAABAAAAAEAAAgAACAUEAAAA=</HashCode>
+      <FileName>src\Platform\Windows\WindowsWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Hazel::WindowProps" Collapsed="true">
+    <Position X="29.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAABAAQAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Hazel\Window.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="Hazel::EventType" Collapsed="true">
+    <Position X="31.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEACAAAAAAgAAAIgAAAAgAAAAEBAgAAAAAIABFgAQA=</HashCode>
+      <FileName>src\Hazel\Event\Event.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Hazel::EventCategory" Collapsed="true">
+    <Position X="29.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAQAAQAAEAAIA=</HashCode>
+      <FileName>src\Hazel\Event\Event.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Hazel::Key::__unnamed_enum_05c4_1" Collapsed="true">
+    <Position X="29.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEIqAmIQCJAiQEQJgIEAAAgHgu1MAAgCC2CAvv//ZXM=</HashCode>
+      <FileName>src\Hazel\Core\KeyCode.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Hazel::Mouse::__unnamed_enum_05c5_1" Collapsed="true">
+    <Position X="31.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAA0D8AAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>src\Hazel\Core\MouseCode.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

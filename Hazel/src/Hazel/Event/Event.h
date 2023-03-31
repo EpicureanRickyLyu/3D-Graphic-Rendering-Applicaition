@@ -23,9 +23,10 @@ namespace Hazel {
 		EventCategoryMouseButton    = (1 << 4)
 	};
 
-#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type; }\
+	//## will concatenating argument
+#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
 								virtual EventType GetEventType() const override { return GetStaticType(); }\
-								virtual const char* GetName() const override { return #type; }//??
+								virtual const char* GetName() const override { return #type; }
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
@@ -34,7 +35,7 @@ namespace Hazel {
 	public:
 		virtual ~Event() = default;
 
-		bool Handled = false;
+		bool m_isHandled = false;
 
 		virtual EventType GetEventType() const = 0;//override in Macro
 		virtual const char* GetName() const = 0;//override in Macro
@@ -57,11 +58,12 @@ namespace Hazel {
 		
 		// F will be deduced by the compiler
 		template<typename T, typename F>
-		bool Dispatch(const F& func)
+		bool Dispatch(const F& func)//func must return bool to show the event is handled
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.Handled |= func(static_cast<T&>(m_Event));//?
+				// when the function to dispatch is handled, change m_isHandled set to true
+				m_Event.m_isHandled |= func(static_cast<T&>(m_Event));
 				return true;
 			}
 			return false;
