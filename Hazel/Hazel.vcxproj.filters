@@ -4,6 +4,9 @@
     <Filter Include="Hazel">
       <UniqueIdentifier>{99294D0D-053E-75BE-CEBF-181E3A9371EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hazel\Core">
+      <UniqueIdentifier>{91354D71-7DED-8EBE-E6F4-671AD2CB29AF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Hazel\Event">
       <UniqueIdentifier>{AAB91B9B-166F-9490-9F63-8E670B188B94}</UniqueIdentifier>
     </Filter>
@@ -22,6 +25,12 @@
     <ClInclude Include="src\Hazel\Core.h">
       <Filter>Hazel</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hazel\Core\KeyCode.h">
+      <Filter>Hazel\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\Core\MouseCode.h">
+      <Filter>Hazel\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hazel\EntryPoint.h">
       <Filter>Hazel</Filter>
     </ClInclude>
@@ -37,6 +46,12 @@
     <ClInclude Include="src\Hazel\Event\MouseEvent.h">
       <Filter>Hazel\Event</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hazel\Layer.h">
+      <Filter>Hazel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazel\LayerStack.h">
+      <Filter>Hazel</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hazel\Log.h">
       <Filter>Hazel</Filter>
     </ClInclude>
@@ -47,11 +62,15 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\pch.h" />
-    <ClInclude Include="src\Hazel\Core\KeyCode.h" />
-    <ClInclude Include="src\Hazel\Core\MouseCode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Application.cpp">
+      <Filter>Hazel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\Layer.cpp">
+      <Filter>Hazel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazel\LayerStack.cpp">
       <Filter>Hazel</Filter>
     </ClCompile>
     <ClCompile Include="src\Hazel\Log.cpp">
@@ -61,8 +80,5 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pch.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
