@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Dev\Hazel\bin\Debug-windows-x86_64\Hazel\Hazel.dll</FullPath>
+      <FullPath>F:\_Dev\3DGameEngine\bin\Debug-windows-x86_64\Hazel\Hazel.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Dev\Hazel\bin\Debug-windows-x86_64\SandBox\SandBox.exe</FullPath>
+      <FullPath>F:\_Dev\3DGameEngine\bin\Debug-windows-x86_64\SandBox\SandBox.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

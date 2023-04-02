@@ -2,7 +2,7 @@
 #include "Application.h"
 
 
-#include "GLFW/glfw3.h"
+#include "GLAD/glad.h"
 
 #include "Hazel/Event/ApplicationEvent.h"
 #include "Log.h"

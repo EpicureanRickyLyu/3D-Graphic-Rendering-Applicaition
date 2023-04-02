@@ -4,9 +4,9 @@
 #include "Hazel/Event/ApplicationEvent.h"
 #include "Hazel/Event/KeyEvent.h"
 #include "Hazel/Event/MouseEvent.h"
-
 #include "Hazel/Log.h"
 
+#include "glad/glad.h"//GLAD will include glfw now
 namespace Hazel
 {
 
@@ -85,6 +85,10 @@ namespace Hazel
 		//Create GLFW Window based on Customized WindowData
 		m_Window = glfwCreateWindow((int)m_data.m_width, (int)m_data.m_height, m_data.m_title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		//init GLAD Like GLEW
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		HZ_CORE_ASSERT(status, "Fail to initialize Glad");
+
 		glfwSetWindowUserPointer(m_Window, &m_data);
 		SetVSync(true);
 
