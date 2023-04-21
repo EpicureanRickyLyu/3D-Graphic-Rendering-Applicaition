@@ -1,9 +1,5 @@
 #include <Hazel.h>
-
-
-
-
-
+#define IMGUI_IMPL_OPENGL_LOADER_CUSTOM
 class SandBox :public Hazel::Application
 {
 public:
