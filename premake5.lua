@@ -58,7 +58,8 @@ project "Hazel"
        "GLFW",
        "GLAD",
        "ImGui",
-       "opengl32.lib"
+       "opengl32.lib",
+       "Dwmapi.lib"
    }
 
    filter "system:windows"
@@ -70,7 +71,8 @@ project "Hazel"
       { 
           "HZ_PLATFORM_WINDOWS",
           "HZ_BUILD_DLL",
-          "GLFW_INCLUDE_NONE"
+          "GLFW_INCLUDE_NONE",
+          "IMGUI_IMPL_OPENGL_LOADER_CUSTOM"
       }
 
       postbuildcommands
