@@ -8,8 +8,10 @@ namespace Hazel
 {
 	class HAZEL_API Application
 	{
+		MAKE_NONCOPYABLE(Application);
 	public:
 		Application();
+
 		virtual ~Application();
 
 		void Run();
@@ -19,6 +21,10 @@ namespace Hazel
 		void PushLayer(Layer* layer);
 
 		void PushOverlay(Layer* overlay);
+
+		inline Window& GetWindow() { return *m_Window; };
+
+		inline static Application& GetInstance() { return *instance; };
 
 	private:
 		bool OnApplicationWindowClosedEvent(Event &e);
@@ -30,6 +36,7 @@ namespace Hazel
 
 		bool m_isRunning = true;
 
+		static Application* instance;
 	};
 
 	//Only declaration here, To be defined in Client

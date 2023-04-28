@@ -19,7 +19,7 @@ IncludeDir = {}
 
 IncludeDir["GLFW"] = "Hazel/Vendor/GLFW/include"
 IncludeDir["GLAD"] = "Hazel/Vendor/GLAD/include"
-IncludeDir["ImGui"] = "Hazel/Vendor/imgui/include"
+IncludeDir["ImGui"] = "Hazel/Vendor/imgui"
 
 include "Hazel/Vendor/GLFW"
 include "Hazel/Vendor/GLAD"

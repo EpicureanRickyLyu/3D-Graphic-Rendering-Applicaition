@@ -8,6 +8,8 @@ namespace Hazel {
 
 	class MouseMovedEvent : public Event
 	{
+		EVENT_CLASS_TYPE(MouseMoved)
+			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	public:
 		MouseMovedEvent(const float x, const float y)
 			: m_MouseX(x), m_MouseY(y) {}
@@ -22,14 +24,14 @@ namespace Hazel {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseMoved)
-			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
 		float m_MouseX, m_MouseY;
 	};
 
 	class MouseScrolledEvent : public Event
 	{
+		EVENT_CLASS_TYPE(MouseScrolled)
+			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	public:
 		MouseScrolledEvent(const float xOffset, const float yOffset)
 			: m_XOffset(xOffset), m_YOffset(yOffset) {}
@@ -44,18 +46,16 @@ namespace Hazel {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseScrolled)
-			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
 		float m_XOffset, m_YOffset;
 	};
 
 	class MouseButtonEvent : public Event
 	{
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput | EventCategoryMouseButton)
 	public:
 		MouseCode GetMouseButton() const { return m_Button; }
 
-		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput | EventCategoryMouseButton)
 	protected:
 		MouseButtonEvent(const MouseCode button)
 			: m_Button(button) {}
@@ -65,6 +65,7 @@ namespace Hazel {
 
 	class MouseButtonPressedEvent : public MouseButtonEvent
 	{
+		EVENT_CLASS_TYPE(MouseButtonPressed)
 	public:
 		MouseButtonPressedEvent(const MouseCode button)
 			: MouseButtonEvent(button) {}
@@ -76,11 +77,11 @@ namespace Hazel {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
 	class MouseButtonReleasedEvent : public MouseButtonEvent
 	{
+		EVENT_CLASS_TYPE(MouseButtonReleased)
 	public:
 		MouseButtonReleasedEvent(const MouseCode button)
 			: MouseButtonEvent(button) {}
@@ -92,7 +93,6 @@ namespace Hazel {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};
 
 }

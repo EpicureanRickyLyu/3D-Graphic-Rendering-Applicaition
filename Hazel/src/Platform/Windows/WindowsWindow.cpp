@@ -93,6 +93,13 @@ namespace Hazel
 		SetVSync(true);
 
 		//Set GLFW Callbacks
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
+			{
+				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				KeyTypedEvent event(keycode);
+				data.m_eventCallback(event);
+			});
+
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
 			{
 				//return the void* pointer to the GLFW Window passed in

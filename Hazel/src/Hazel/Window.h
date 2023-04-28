@@ -11,7 +11,7 @@ namespace Hazel
 		unsigned int m_Width;
 		unsigned int m_Height;
 
-		WindowProps(const std::string title = "Capybara", unsigned int width = 1280, unsigned int height = 720)
+		WindowProps(const std::string title = "Capybara", unsigned int width = 1920, unsigned int height = 1080)
 			:m_Title(title), m_Width(width), m_Height(height)
 		{
 		}

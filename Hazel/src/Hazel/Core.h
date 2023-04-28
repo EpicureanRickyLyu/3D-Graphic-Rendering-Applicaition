@@ -18,3 +18,19 @@
 	#define HZ_ASSERT(x,...)
 	#define HZ_CORE_ASSERT(x,...)
 #endif // HZ_ENABLE_ASSERTS
+
+#define BIND_EVENT_FN_1(funcName) std::bind(&funcName, this, std::placeholders::_1) 
+
+#define MAKE_SINGLETON(className) \
+private:\
+className() = default;\
+const className(const className& other) = delete;\
+const className& operator = (const className& other) = delete;\
+public:\
+inline static className& GetInstance() { static className instance; return instance; };\
+
+#define MAKE_NONCOPYABLE(className) \
+private:\
+const className(const className& other) = delete;\
+const className& operator = (const className& other) = delete;\
+

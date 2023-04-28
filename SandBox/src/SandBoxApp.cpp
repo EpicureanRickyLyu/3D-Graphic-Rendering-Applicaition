@@ -1,11 +1,12 @@
 #include <Hazel.h>
-#define IMGUI_IMPL_OPENGL_LOADER_CUSTOM
+
 class SandBox :public Hazel::Application
 {
 public:
+	//Base Application Constructor will create a window
 	SandBox()
 	{
-
+		PushLayer(new Hazel::ImGuiLayer());
 	}
 
 	~SandBox()
