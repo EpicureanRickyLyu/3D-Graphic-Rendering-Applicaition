@@ -5,6 +5,6 @@
 	path = Hazel/Vendor/GLFW
 	url = https://github.com/TheCherno/glfw.git
 
-[submodule "Hazel/Vendor/ImGui"]
-	path = Hazel/Vendor/ImGui
+[submodule "Hazel/Vendor/imgui"]
+	path = Hazel/Vendor/imgui
 	url = https://github.com/TheCherno/imgui.git
